@@ -14,8 +14,9 @@ class Home extends React.Component {
         this.UsuarioService = new UsuarioService();
     }
 
+
     componentDidMount() {
-       
+
         const usuarioLogado = LocalStorageService.obterItem('_usuario_logado')
         this.UsuarioService
             .obterSaldoPorUsuario(usuarioLogado.id)
@@ -37,7 +38,7 @@ class Home extends React.Component {
                 <p className="lead">
 
                     <a className="btn btn-primary btn-lg" href="#/cadastro-usuarios" role="button"><i className="fa fa-users"></i>  Cadastrar Usuário</a>
-                    <a className="btn btn-danger btn-lg" href="#/lancamentos" role="button" style={{ marginLeft: '5px' }}><i className="fa fa-users"></i>  Cadastrar Lançamento</a>
+                    <a className="btn btn-danger btn-lg" href="#/cadastroLancamentos" role="button" style={{ marginLeft: '5px' }}><i className="fa fa-users"></i>  Cadastrar Lançamento</a>
                 </p>
             </div>
         )
